@@ -3,7 +3,7 @@
 Plugin Name: Single Latest Posts Lite
 Plugin URI: http://wordpress.org/extend/plugins/single-latest-posts-lite/
 Description: Display the latest posts available in your WordPress blog using functions, shortcodes or widgets.
-Version: 1.2.5
+Version: 1.3
 Author: L'Elite
 Author URI: http://laelite.info/
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -56,6 +56,7 @@ require_once dirname( __FILE__ ) . '/single-latest-posts-config.php';
  * -- @wrapper_list_css   : Custom CSS classes for the list wrapper
  * -- @wrapper_block_css  : Custom CSS classes for the block wrapper
  * -- @instance           : This parameter is intended to differentiate each instance of the widget/shortcode/function you use, it's required in order for the asynchronous pagination links to work
+ * -- @suppress_filters   : This parameter is specially useful when dealing with WP_Query custom filters, if you are using a plugin like Advanced Category Excluder then you must set this value to YES/TRUE
  */
 function single_latest_posts( $parameters ) {
     // Global variables
@@ -69,6 +70,7 @@ function single_latest_posts( $parameters ) {
         'title'            => NULL,          // Section title
         'title_only'       => TRUE,          // Display the post title only
         'instance'         => NULL,          // Instance identifier, used to uniquely differenciate each shortcode or widget used
+        'suppress_filters' => FALSE,         // Suppress query filters
         /*
          * Posts Settings
          */
@@ -220,6 +222,10 @@ function single_latest_posts( $parameters ) {
             'orderby' => $orderby
         );
     }
+    // Suppress Query Filters
+    if( $suppress_filters == 'true' || $suppress_filters == true ) {
+        $args['suppress_filters'] = true;
+    }
     $posts_list = slp_get_posts($args, $time_frame);
     // Put everything inside an array for sorting purposes
     foreach( $posts_list as $post ) {
@@ -244,6 +250,10 @@ function single_latest_posts( $parameters ) {
         ';
         // Close the door and get out of here
         return;
+    }
+
+    if( function_exists( 'ace_init' ) ) {
+
     }
     // Open content box
     echo $html_tags['content_o'];
