@@ -9,7 +9,7 @@
 /* 
  * Copyright 2007 - 2012 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
- * and cannot be re-used in conjuction with the GPL v2 usage of this software 
+ * and cannot be re-used in conjunction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
  *
  * Single Latest Posts brings all the awesomeness available

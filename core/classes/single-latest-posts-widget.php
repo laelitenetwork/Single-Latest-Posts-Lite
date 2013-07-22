@@ -1,7 +1,7 @@
 <?php
 /*
  * Single Latest Posts Lite Widget
- * Version 1.4
+ * Version 1.4.1
  * Author L'Elite
  * Author URI http://laelite.info/
  * License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
@@ -9,7 +9,7 @@
 /* 
  * Copyright 2007 - 2013 L'Elite de José SAYAGO (opensource@laelite.info)
  * 'SLPosts Lite', 'SLPosts Pro', 'NLPosts' are unregistered trademarks of L'Elite, 
- * and cannot be re-used in conjuction with the GPL v2 usage of this software 
+ * and cannot be re-used in conjunction with the GPL v2 usage of this software 
  * under the license terms of the GPL v2 without permission.
  *
  * Single Latest Posts brings all the awesomeness available
