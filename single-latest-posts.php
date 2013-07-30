@@ -246,10 +246,6 @@ function single_latest_posts( $parameters ) {
         // Close the door and get out of here
         return;
     }
-
-    if( function_exists( 'ace_init' ) ) {
-
-    }
     // Open content box
     echo $html_tags['content_o'];
     // slposts title
