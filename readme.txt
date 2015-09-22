@@ -1,9 +1,9 @@
 === Single Latest Posts Lite ===
 Contributors: L'Elite
-Donate link: http://laelite.info
+Donate link: https://store.wplatino.com
 Tags: recent posts, shortcode, widget, latest posts, single installation
 Requires at least: 3.0
-Tested up to: 4.2
+Tested up to: 4.3.1
 Stable tag: 1.4.3
 
 This plugin allows you to pull all the recent posts from your WordPress blog and display them the way you want
